@@ -1,0 +1,8 @@
+com\kgisl\SpringCRUD\config\AppInitializer.class
+com\kgisl\SpringCRUD\Controllers\TeacherController.class
+com\kgisl\SpringCRUD\Dao\TeacherDao.class
+com\kgisl\SpringCRUD\model\Teacher.class
+com\kgisl\SpringCRUD\Service\TeacherService.class
+com\kgisl\SpringCRUD\config\MvcConfig.class
+com\kgisl\SpringCRUD\Mapper\TeacherRowMapper.class
+com\kgisl\SpringCRUD\config\WebConfig.class
