@@ -1,0 +1,16 @@
+com\KGiSL\JpaProject\MultiFetch.class
+com\KGiSL\JpaProject\Student.class
+com\KGiSL\JpaProject\SingleFetch.class
+com\KGiSL\JpaProject\Library.class
+com\KGiSL\JpaProject\Book.class
+com\KGiSL\JpaProject\Address.class
+com\KGiSL\JpaProject\StudentEntity1.class
+com\KGiSL\JpaProject\StudentEntity.class
+com\KGiSL\JpaProject\Subject.class
+com\KGiSL\JpaProject\AscDesc.class
+com\KGiSL\JpaProject\App.class
+com\KGiSL\JpaProject\Employee.class
+com\KGiSL\JpaProject\ManyToManyExample.class
+com\KGiSL\JpaProject\ListMapping.class
+com\KGiSL\JpaProject\ManyToOneExample.class
+com\KGiSL\JpaProject\StudentCascade.class

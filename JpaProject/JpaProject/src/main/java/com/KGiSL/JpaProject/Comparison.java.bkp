@@ -1,0 +1,133 @@
+package com.KGiSL.JpaProject;
+
+import java.util.List;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
+import jakarta.persistence.TypedQuery;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Root;
+
+public class Comparison {
+
+   public static void main(String args[]) {
+
+      EntityManagerFactory emf = Persistence.createEntityManagerFactory("JpaProject");
+      EntityManager em = emf.createEntityManager();
+      em.getTransaction().begin();
+
+      CriteriaBuilder cb = em.getCriteriaBuilder();
+
+      CriteriaQuery<StudentEntity> cq1 = cb.createQuery(StudentEntity.class);
+
+      Root<StudentEntity> stud1 = cq1.from(StudentEntity.class);
+
+      cq1.where(cb.gt(stud1.get("s_age").as(Integer.class), 22));
+
+      CriteriaQuery<StudentEntity> select1 = cq1.select(stud1);
+      TypedQuery<StudentEntity> tq1 = em.createQuery(select1);
+      List<StudentEntity> list1 = tq1.getResultList();
+
+      System.out.println("Students having age greater than 22");
+
+      System.out.print("s_id");
+      System.out.print("\t s_name");
+      System.out.println("\t s_age");
+
+      for (StudentEntity s : list1) {
+         System.out.print(s.getS_id());
+         System.out.print("\t" + s.getS_name());
+         System.out.println("\t" + s.getS_age());
+      }
+      System.out.println("-------------------------------------------------------------------------------------");
+      CriteriaQuery<StudentEntity> cq2 = cb.createQuery(StudentEntity.class);
+      Root<StudentEntity> stud2 = cq2.from(StudentEntity.class);
+
+      cq2.where(cb.lt(stud2.get("s_age").as(Integer.class), 22));
+
+      CriteriaQuery<StudentEntity> select2 = cq2.select(stud2);
+      TypedQuery<StudentEntity> tq2 = em.createQuery(select2);
+      List<StudentEntity> list2 = tq2.getResultList();
+
+      System.out.println("Students having age Less than 22");
+
+      System.out.print("s_id");
+      System.out.print("\t s_name");
+      System.out.println("\t s_age");
+
+      for (StudentEntity s : list2) {
+         System.out.print(s.getS_id());
+         System.out.print("\t" + s.getS_name());
+         System.out.println("\t" + s.getS_age());
+      }
+      System.out.println("-------------------------------------------------------------------------------------------");
+      CriteriaQuery<StudentEntity> cq3 = cb.createQuery(StudentEntity.class);
+      Root<StudentEntity> stud3 = cq3.from(StudentEntity.class);
+
+      cq3.where(cb.between(stud3.get("s_age").as(Integer.class), 22, 26));
+      CriteriaQuery<StudentEntity> select = ((CriteriaQuery<StudentEntity>) cq3).select(stud3);
+      TypedQuery<StudentEntity> tq = em.createQuery(select);
+      List<StudentEntity> list = tq.getResultList();
+
+      System.out.println("Students having age between 22 and 26");
+
+      System.out.print("s_id");
+      System.out.print("\t s_name");
+      System.out.println("\t s_age");
+
+      for (StudentEntity s : list) {
+         System.out.print(s.getS_id());
+         System.out.print("\t" + s.getS_name());
+         System.out.println("\t" + s.getS_age());
+      }
+
+      System.out.println(
+            "---------------------------------------------------------------------------------------------------");
+
+      CriteriaQuery<StudentEntity> cq4 = cb.createQuery(StudentEntity.class);
+      Root<StudentEntity> stud4 = cq2.from(StudentEntity.class);
+
+      cq4.where(cb.like(stud4.get("s_name").as(String.class), "R%"));
+      CriteriaQuery<StudentEntity> select4 = ((CriteriaQuery<StudentEntity>) cq4).select(stud4);
+      TypedQuery<StudentEntity> tq4 = em.createQuery(select4);
+      List<StudentEntity> list12 = tq4.getResultList();
+
+      System.out.println("Students name starting with R");
+
+      System.out.print("s_id");
+      System.out.print("\t s_name");
+      System.out.println("\t s_age");
+
+      for (StudentEntity s : list12) {
+         System.out.print(s.getS_id());
+         System.out.print("\t" + s.getS_name());
+         System.out.println("\t" + s.getS_age());
+      }
+      System.out.println("------------------------------------------------------------------------");
+      CriteriaQuery<StudentEntity> cq5 = cb.createQuery(StudentEntity.class);
+      Root<StudentEntity> stud5 = cq5.from(StudentEntity.class);
+
+      cq5.where(cb.in(stud5.get("s_age")).value(22).value(24));
+      CriteriaQuery<StudentEntity> select5 = ((CriteriaQuery<StudentEntity>) cq).select(stud);
+      TypedQuery<StudentEntity> tq5 = em.createQuery(select5);
+      List<StudentEntity> list25 = tq5.getResultList();
+
+      System.out.println("Students having age 22 and 24");
+
+      System.out.print("s_id");
+      System.out.print("\t s_name");
+      System.out.println("\t s_age");
+
+      for (StudentEntity s : list25) {
+         System.out.print(s.getS_id());
+         System.out.print("\t" + s.getS_name());
+         System.out.println("\t" + s.getS_age());
+      }
+
+      em.getTransaction().commit();
+      em.close();
+      emf.close();
+   }
+}
