@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [08/Nov/2023:16:47:14 +0530] "GET / HTTP/1.1" 200 362 http-bio-9000-exec-1 487
+0:0:0:0:0:0:0:1 - - [08/Nov/2023:16:47:26 +0530] "GET /process.jsp?uname=gobi&uemail=gobi%40123&upass=1234 HTTP/1.1" 200 52 http-bio-9000-exec-3 629

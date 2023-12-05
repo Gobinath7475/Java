@@ -1,0 +1,4 @@
+bean\RegisterDao.class
+bean\User.class
+bean\ConnectionProvider.class
+bean\Provider.class
