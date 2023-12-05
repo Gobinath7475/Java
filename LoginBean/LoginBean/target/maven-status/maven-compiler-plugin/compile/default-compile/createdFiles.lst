@@ -1,0 +1,5 @@
+bean\LoginBean.class
+bean\BCrypt.class
+bean\ConnectionProvider.class
+bean\LoginDao.class
+bean\Provider.class
