@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Data</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        /* Apply some basic styling to make it visible */
+        /* Apply some basic styling to make it visible */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.column {
+    flex: 1;
+    border: 1px solid #000;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #e01111; /* Green header background */
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- First row with 6 columns -->
+        <div class="row">
+            <div class="column" id="column1">septemberRegistrations</div>
+            <div class="column" id="column2">earliestInSeptember</div>
+            <div class="column" id="column3">octoberRegistrations</div>
+            <div class="column" id="column4">marathonAthletes</div>
+            <div class="column" id="column5">uniqueEvents</div>
+            <div class="column" id="column6">marathonAthletes</div>
+        </div>
+
+        <!-- Second row with 1 column -->
+        <div class="row">
+            <div class="column" id="column7">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>registration_id</th>
+                            <th>event_name</th>
+                            <th>athlete_name</th>
+                            <th>registration_date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reg"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="reg1.js"></script>
+    <script type="text/javascript">
+        getItems();
+    </script>
+</body>
+</html>
+
+
