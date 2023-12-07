@@ -9,8 +9,6 @@
 <body>
     <a href="<c:url value='/teachers/add'/>">Add Teacher</a>
 
-   
-
 				<c:choose>
 					<c:when test="${teachers != null}">
 						<h3>List of Teachers</h3>
