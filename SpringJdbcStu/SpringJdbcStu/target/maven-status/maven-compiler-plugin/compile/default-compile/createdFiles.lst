@@ -1,0 +1,14 @@
+com\kgisl\SpringJdbcStu\Controllers\TeacherController.class
+com\kgisl\SpringJdbcStu\Config\MvcConfig.class
+com\kgisl\SpringJdbcStu\Config\WebConfig.class
+com\kgisl\SpringJdbcStu\Dao\TeacherDao.class
+com\kgisl\SpringJdbcStu\Dao\StudentDao.class
+com\kgisl\SpringJdbcStu\Service\StudentService.class
+com\kgisl\SpringJdbcStu\Service\TeacherService.class
+com\kgisl\SpringJdbcStu\Mapper\TeacherRowMapper.class
+com\kgisl\SpringJdbcStu\Controllers\StudentController.class
+com\kgisl\SpringJdbcStu\model\Student.class
+com\kgisl\SpringJdbcStu\model\Teacher.class
+com\kgisl\SpringJdbcStu\Config\AppInitializer.class
+com\kgisl\SpringJdbcStu\Mapper\StudentRowMapper.class
+com\kgisl\SpringJdbcStu\model\helloworld.class
