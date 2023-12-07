@@ -1,0 +1,37 @@
+logging:
+  level:
+    ROOT: INFO
+    org.springframework: ERROR
+    org.hibernate: ERROR
+    com.kgisl.sb1: DEBUG
+  pattern:
+    console: "- %msg%n"
+  file:
+    name: logs/sb1.log
+    rolling-policy:
+      file-name-pattern: logs/sb1.%d{yyyy-MM-dd-HH-mm}.log
+      max-history: 5
+    triggering-policy:
+      time-based:
+        rollover-interval: 1m
+
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:h2:file:/data/sb1
+    driverClassName: org.h2.Driver
+    username: sa
+    password: sa
+
+  h2:
+    console:
+      enabled: true
+      path: /h2
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
