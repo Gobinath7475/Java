@@ -1,0 +1,24 @@
+<web-app xmlns="https://xmlns.jcp.org/xml/ns/javaee"        
+ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"      
+   xsi:schemaLocation="https://xmlns.jcp.org/xml/ns/javaee      
+    https://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"        
+     version="3.1">
+ 
+  <display-name>Archetype Created Web Application</display-name>
+ 
+  <!-- <servlet>  
+    <servlet-name>sonoojaiswal</servlet-name>  
+    <jsp-file>/welcome.jsp</jsp-file>  
+    </servlet>  
+      
+    <servlet-mapping>  
+    <servlet-name>sonoojaiswal</servlet-name>  
+    <url-pattern>/welcome</url-pattern>  
+    </servlet-mapping>  
+      
+    <context-param>  
+    <param-name>dname</param-name>  
+    <param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>  
+    </context-param>    -->
+ 
+</web-app>
