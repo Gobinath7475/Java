@@ -1,0 +1,4 @@
+com\kgisl\SpringFileUpload\config\WebConfig.class
+com\kgisl\SpringFileUpload\config\AppInitializer.class
+com\kgisl\SpringFileUpload\Controllers\FileUploadController.class
+com\kgisl\SpringFileUpload\config\MvcConfig.class
