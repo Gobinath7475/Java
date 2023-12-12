@@ -1,0 +1,4 @@
+com\kgisl\SpringBootFileupload\Entity\FileEntity.class
+com\kgisl\SpringBootFileupload\Controllers\FileUploadController.class
+com\kgisl\SpringBootFileupload\Repository\FileRepository.class
+com\kgisl\SpringBootFileupload\SpringBootFileuploadApplication.class

@@ -1,0 +1,23 @@
+<!-- fileList.jsp -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File List</title>
+</head>
+
+<body>
+    <h2>File List</h2>
+    <ul>
+        <li th:each="file : ${files}">
+            <span th:text="${file.id}"></span>:
+            <span th:text="${file.filename}"></span> <!-- Display the filename -->
+        </li>
+    </ul>
+
+    <br>
+    <a href="<c:url value='/files/' />">Go to Upload Page</a>
+</body>
+
+</html>
